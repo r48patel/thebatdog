@@ -1,0 +1,6 @@
+{
+  "name": "Website of a bundle of joy",
+  "description": "All the pictures of The Bat Dog!",
+  "repository": "https://github.com/r48patel/thebatdog",
+  "keywords": ["node", "express", "static"],
+}
