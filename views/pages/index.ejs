@@ -1,20 +1,15 @@
 <% include ../partials/header.ejs %>
 				<!-- Main -->
 					<div id="main">
-						<article class="thumb">
-							<a href="images/fulls/01.jpg" class="image"><img src="images/fulls/01.jpg" alt="" /></a>
-							<h2>I am free!</h2>
-							<p>Gotta go expore my new home.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/02.jpg" class="image"><img src="images/fulls/02.jpg" alt="" /></a>
-							<h2>Massage Time.</h2>
-							<p>I love my belly rubs.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/03.jpg" class="image"><img src="images/fulls/03.jpg" alt="" /></a>
-							<h2>Raising paw</h2>
-							<p>Becase mommy says I'm the cutest</p>
-						</article>
+
+						<% for(var i=0; i<gallery_info.length; i++) { %>
+							<article class="thumb">
+								<a href=<%= gallery_info[i]['url']%> class="image">
+									<img src=<%= gallery_info[i]['url']%> alt="" />
+								</a>
+								<h2><%= gallery_info[i]['title']%></h2>
+								<p><%= gallery_info[i]['desc']%></p>
+							</article>
+						<% } %>
 					</div>
 <% include ../partials/footer.ejs %>
