@@ -5,11 +5,11 @@ var fs = require('fs');
 var gallery_info=[];
 var projects_info = fs.readFileSync(__dirname + '/views/templates/pics.txt').toString().split('\n');
 
-for(var i=0; i<projects_info.length;i+=3){
+for(var i=projects_info.length-1; i>=0;i-=3){
 	gallery_info.push({
-		url: projects_info[i],
-		title: projects_info[i+1],
-		desc: projects_info[i+2]
+		url: projects_info[i-2],
+		title: projects_info[i-1],
+		desc: projects_info[i]
 	});
 }
 
